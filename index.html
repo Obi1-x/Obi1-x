@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okezie Obiefuna</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div>
+          <a class="logo" href="#home">Devfolio</a>
+        </div>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Samples</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Okezie Obiefuna</h1>
+            <h2>Software Developer</h2>
+            <p>I help brands stand out with stunning web designs and powerful digital solutions that drive results.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="#"><i class="fab fa-dribbble"></i></a>
+            </div>
+            <a href="#contact" class="cta-button">Hire Me</a>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Frontend Development</h3>
+                <ul class="skill-list">
+                    <li>HTML5 & CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>React.js & Vue.js</li>
+                    <li>Responsive Design</li>
+                    <li>UI/UX Principles</li>
+                    <li>CSS Preprocessors (SASS)</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Backend Development</h3>
+                <ul class="skill-list">
+                    <li>Node.js & Express</li>
+                    <li>MongoDB & Mongoose</li>
+                    <li>Firebase & Firestore</li>
+                    <li>RESTful API Design</li>
+                    <li>Authentication (JWT, OAuth)</li>
+                    <li>Server Deployment</li>
+                </ul>
+            </div>
+            <div class="skill-category">
+                <h3>Other Skills</h3>
+                <ul class="skill-list">
+                    <li>Git & Version Control</li>
+                    <li>Agile Methodologies</li>
+                    <li>Testing (Jest, Mocha)</li>
+                    <li>Web Performance Optimization</li>
+                    <li>Progressive Web Apps</li>
+                    <li>Technical Writing</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h2 class="section-title">My Work</h2>
+        <div class="portfolio-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Design</button>
+            <button class="filter-btn" data-filter="app">Web App</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="E-commerce Website">
+                </div>
+                <div class="portfolio-info">
+                    <h3>Luxe Fashion E-commerce</h3>
+                    <p>A high-end fashion e-commerce platform with seamless checkout and product customization.</p>
+                    <div class="portfolio-links">
+                        <a href="#">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="app">
+                <div class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" alt="Analytics Dashboard">
+                </div>
+                <div class="portfolio-info">
+                    <h3>Data Analytics Dashboard</h3>
+                    <p>Real-time business analytics dashboard with interactive data visualization tools.</p>
+                    <div class="portfolio-links">
+                        <a href="#">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="mobile">
+                <div class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Fitness App">
+                </div>
+                <div class="portfolio-info">
+                    <h3>FitTrack Mobile App</h3>
+                    <p>A fitness tracking app with workout plans, nutrition tracking, and progress analytics.</p>
+                    <div class="portfolio-links">
+                        <a href="#">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Corporate Website">
+                </div>
+                <div class="portfolio-info">
+                    <h3>TechStart Corporate Site</h3>
+                    <p>Modern corporate website with animated elements and CMS integration.</p>
+                    <div class="portfolio-links">
+                        <a href="#">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="app">
+                <div class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project Management">
+                </div>
+                <div class="portfolio-info">
+                    <h3>TeamFlow Project Management</h3>
+                    <p>Collaborative project management tool with task tracking and team communication.</p>
+                    <div class="portfolio-links">
+                        <a href="#">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-item" data-category="mobile">
+                <div class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Finance App">
+                </div>
+                <div class="portfolio-info">
+                    <h3>MoneyMind Finance Tracker</h3>
+                    <p>Personal finance app with budgeting tools, expense tracking, and financial insights.</p>
+                    <div class="portfolio-links">
+                        <a href="#">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2 class="section-title">My Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Frontend Development</h3>
+                <p>Beautiful, responsive websites built with modern technologies that work across all devices.</p>
+                <div class="service-price">From $1,500</div>
+                <div class="service-industries">
+                    <h4>Industries I serve:</h4>
+                    <div class="industry-tags">
+                        <span class="industry-tag">E-commerce</span>
+                        <span class="industry-tag">SaaS</span>
+                        <span class="industry-tag">Startups</span>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Backend Development</h3>
+                <p>Robust server-side solutions, APIs, and database architectures to power your applications.</p>
+                <div class="service-price">From $2,000</div>
+                <div class="service-industries">
+                    <h4>Industries I serve:</h4>
+                    <div class="industry-tags">
+                        <span class="industry-tag">Enterprise</span>
+                        <span class="industry-tag">FinTech</span>
+                        <span class="industry-tag">Healthcare</span>
+                    </div>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Mobile App Development</h3>
+                <p>Cross-platform mobile applications that deliver seamless user experiences on iOS and Android.</p>
+                <div class="service-price">From $3,500</div>
+                <div class="service-industries">
+                    <h4>Industries I serve:</h4>
+                    <div class="industry-tags">
+                        <span class="industry-tag">Fitness</span>
+                        <span class="industry-tag">Education</span>
+                        <span class="industry-tag">Social</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2 class="section-title">Client Testimonials</h2>
+        <div class="testimonial-stats">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Projects Completed</div>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>William transformed our outdated website into a modern, high-performing platform that increased our conversion rate by 45%. His attention to detail and technical expertise were impressive.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-img">
+                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+                    </div>
+                    <div class="author-info">
+                        <h4>Sarah Johnson</h4>
+                        <p>CEO, TechSolutions</p>
+                    </div>
+                    <div class="testimonial-source">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>The mobile app William developed for our fitness startup exceeded all expectations. User engagement is through the roof, and the codebase is so clean that our team can easily maintain it.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-img">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                    </div>
+                    <div class="author-info">
+                        <h4>Michael Chen</h4>
+                        <p>Founder, FitTrack</p>
+                    </div>
+                    <div class="testimonial-source">
+                        <i class="fab fa-google"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-content">
+                    <p>We hired William to build our e-commerce platform from scratch. Not only did he deliver ahead of schedule, but he also implemented several optimizations that reduced our server costs by 30%.</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-img">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez">
+                    </div>
+                    <div class="author-info">
+                        <h4>Emma Rodriguez</h4>
+                        <p>Marketing Director, LuxeFashion</p>
+                    </div>
+                    <div class="testimonial-source">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Let's talk about your project</h3>
+                <p>Have a project in mind or want to discuss potential collaboration? Feel free to reach out through any of these channels.</p>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <a href="mailto:hello@williamturner.dev">hello@williamturner.dev</a>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <a href="tel:+1234567890">+1 (234) 567-890</a>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/1234567890">Chat on WhatsApp</a>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Book a Call</h4>
+                        <a href="https://calendly.com/williamturner">Schedule a Meeting</a>
+                    </div>
+                </div>
+                
+                <div class="contact-social">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <div class="about-img">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="William Turner">
+            </div>
+            <div class="about-content">
+                <h3>Software Developer & Problem Solver</h3>
+                <p>With over 7 years of experience in software development, I've helped startups and established businesses transform their ideas into successful digital products. My approach combines technical excellence with a deep understanding of user needs.</p>
+                <p>I believe in writing clean, maintainable code and building solutions that stand the test of time. When I'm not coding, you'll find me contributing to open-source projects, mentoring junior developers, or exploring new technologies.</p>
+                
+                <div class="about-details">
+                    <h4>Key Expertise</h4>
+                    <ul>
+                        <li>Full-stack Development</li>
+                        <li>UI/UX Design</li>
+                        <li>Performance Optimization</li>
+                        <li>Technical Leadership</li>
+                        <li>Agile Development</li>
+                        <li>Code Review & Mentoring</li>
+                    </ul>
+                </div>
+                
+                <a href="#" class="download-cv">
+                    <i class="fas fa-download"></i> Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2 class="section-title">Latest Articles</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Web Development">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-date">June 15, 2023</div>
+                    <h3>The Future of React in 2023</h3>
+                    <p>Exploring the latest trends, features, and best practices in React development as we move through 2023.</p>
+                    <a href="#" class="read-more">Read More ?</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="JavaScript">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-date">May 28, 2023</div>
+                    <h3>JavaScript Performance Optimization</h3>
+                    <p>Practical techniques to improve your JavaScript code performance and deliver faster web experiences.</p>
+                    <a href="#" class="read-more">Read More ?</a>
+                </div>
+            </div>
+            <div class="blog-card">
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Career">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-date">April 10, 2023</div>
+                    <h3>Building a Developer Portfolio That Stands Out</h3>
+                    <p>Tips and strategies to create a portfolio that showcases your skills and attracts potential clients.</p>
+                    <a href="#" class="read-more">Read More ?</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="resources">
+            <h3>Free Resources</h3>
+            <p>Download these free resources to help with your next project.</p>
+            <div class="resource-cards">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <h4>React Component Library</h4>
+                    <p>A collection of reusable React components to speed up your development process.</p>
+                    <a href="#" class="download-resource">Download</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h4>JavaScript Style Guide</h4>
+                    <p>Comprehensive style guide for writing clean, maintainable JavaScript code.</p>
+                    <a href="#" class="download-resource">Download</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h4>UI Design Templates</h4>
+                    <p>Figma templates for common UI patterns and website layouts.</p>
+                    <a href="#" class="download-resource">Download</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">Devfolio</div>
+                <p>Creating digital experiences that are beautiful, functional, and user-focused.</p>
+                <p>� 2023 William Turner. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Mobile Development</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Technical Writing</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Me</h3>
+                <div class="footer-social-links">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                </div>
+                <p>Want to discuss a project? <a href="#contact" style="color: var(--light-blue);">Get in touch</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Designed & Developed by William Turner</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+     <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
