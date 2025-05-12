@@ -6,6 +6,8 @@
     <title>Okezie Obiefuna</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="main.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
 </head>
 <body>
     <!-- Header -->
@@ -19,12 +21,12 @@
         <nav>
             <ul>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#portfolio">Samples</a></li>
+                <li><a onclick="setWeb()" href="#portfolio">Portfolio</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#blog">Blog</a></li>
+                <!--<li><a href="#blog">Blog</a></li>-->
             </ul>
         </nav>
     </header>
@@ -36,11 +38,11 @@
             <h2>Software Developer</h2>
             <p>I help brands stand out with stunning web designs and powerful digital solutions that drive results.</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-dribbble"></i></a>
+                <a href="https://github.com/Obi1-x" class="active-link"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/okezie-obiefuna-6a098278" class="active-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href=""><i class="fab fa-twitter no-link"></i></a>
             </div>
+
             <a href="#contact" class="cta-button">Hire Me</a>
         </div>
     </section>
@@ -48,125 +50,394 @@
     <!-- Skills Section -->
     <section id="skills">
         <h2 class="section-title">My Skills</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Frontend Development</h3>
-                <ul class="skill-list">
-                    <li>HTML5 & CSS3</li>
-                    <li>JavaScript (ES6+)</li>
-                    <li>React.js & Vue.js</li>
-                    <li>Responsive Design</li>
-                    <li>UI/UX Principles</li>
-                    <li>CSS Preprocessors (SASS)</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Backend Development</h3>
-                <ul class="skill-list">
-                    <li>Node.js & Express</li>
-                    <li>MongoDB & Mongoose</li>
-                    <li>Firebase & Firestore</li>
-                    <li>RESTful API Design</li>
-                    <li>Authentication (JWT, OAuth)</li>
-                    <li>Server Deployment</li>
-                </ul>
-            </div>
-            <div class="skill-category">
-                <h3>Other Skills</h3>
-                <ul class="skill-list">
-                    <li>Git & Version Control</li>
-                    <li>Agile Methodologies</li>
-                    <li>Testing (Jest, Mocha)</li>
-                    <li>Web Performance Optimization</li>
-                    <li>Progressive Web Apps</li>
-                    <li>Technical Writing</li>
-                </ul>
+
+        <div class="scroll-buttons">
+            <div class="scroll-left"><i class="fa fa-caret-left" aria-hidden="true"></i></div>
+            <div class="scroll-right"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="horizontal-scroll-container">
+            <div class="skills-container card-scroll-wrapper">
+        
+                <div class="skill-category scroll-card">
+                    <h3>Frontend web dev</h3>
+                    <ul class="skill-list">
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript (ES6+)</li>
+                        <li>React.js & Vue.js</li>
+                        <li>Bootstrap 5 & Tailwind</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-category scroll-card">
+                    <h3>Backend development</h3>
+                    <ul class="skill-list">
+                        <li>Node.js & Express</li>
+                        <li>MongoDB & Firebase DB</li>
+                        <li>RESTful API Design</li>
+                        <li>Authentication (JWT, OAuth)</li>
+                        <li>Server Deployment</li>
+                        <li>NEXT.js & NUXT.js SSR</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-category scroll-card">
+                    <h3>Mobile app dev</h3>
+                    <ul class="skill-list">
+                        <li>React Native</li>
+                        <li>Dart & Flutter</li>
+                        <li>Android studio SDK</li>
+                        <li>Java & Kotlin</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-category scroll-card">
+                    <h3>No code app dev</h3>
+                    <ul class="skill-list">
+                        <li>Bubble.io</li>
+                        <li>Framer</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-category scroll-card">
+                    <h3>Game dev</h3>
+                    <ul class="skill-list">
+                        <li>2D & 3D games</li>
+                        <li>Unity game engine</li>
+                        <li>Three.js & WebGL</li>
+                        <li>C# scripting</li>
+                        <li>Animation rigging</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-category scroll-card">
+                    <h3>Blockchain dev</h3>
+                    <ul class="skill-list">
+                        <li>Solidity</li>
+                        <li>Dapp development</li>
+                        <li>Trufle</li>
+                        <li>Hard hat & Ether.js</li>
+                        <li>Lightning Network</li>
+                        <li>Web3.js</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-category scroll-card">
+                    <h3>Excel VBA dev</h3>
+                    <ul class="skill-list">
+                        <li>Microsoft excel</li>
+                        <li>Sheets automation</li>
+                        <li>Macro dev</li>
+                        <li>Charts & Formulas</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-category scroll-card">
+                    <h3>Embedded systems dev</h3>
+                    <ul class="skill-list">
+                        <li>C & C++ Lang</li>
+                        <li>MPLAB IDE</li>
+                        <li>MikroC</li>
+                        <li>PIC controllers</li>
+                        <li>ESP Modules</li>
+                    </ul>
+                </div>
+        
+                <div class="skill-category scroll-card">
+                    <h3>Other Skills</h3>
+                    <ul class="skill-list">
+                        <li>Git & Version Control</li>
+                        <li>Agile Methodologies</li>
+                        <li>Testing (Jest, Mocha)</li>
+                        <li>Web Performance Optimization</li>
+                        <li>Progressive Web Apps</li>
+                        <li>Technical Writing</li>
+                    </ul>
+                </div>
+        
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
     <section id="portfolio">
-        <h2 class="section-title">My Work</h2>
+        <h2 class="section-title">Portfolio</h2>
         <div class="portfolio-filter">
             <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="web">Web Design</button>
-            <button class="filter-btn" data-filter="app">Web App</button>
+            <button class="filter-btn" data-filter="web">Web</button>
             <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="nocode">No code</button>
+            <button class="filter-btn" data-filter="game">Game</button>
+            <button class="filter-btn" data-filter="blockchain">Blockchain</button>
+            <button class="filter-btn" data-filter="vba">Excel VBA</button>
+            <button class="filter-btn" data-filter="embedded">Embedded</button>
+
         </div>
         <div class="portfolio-grid">
+
             <div class="portfolio-item" data-category="web">
                 <div class="portfolio-img">
-                    <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="E-commerce Website">
+                    <img src="img/craftzvil_land.JPG" alt="Craftzvil landing page">
                 </div>
                 <div class="portfolio-info">
-                    <h3>Luxe Fashion E-commerce</h3>
-                    <p>A high-end fashion e-commerce platform with seamless checkout and product customization.</p>
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">Apr 2025 - ongoing</span>
+                    </div>
+                    <h3>Craftzvil</h3>
+                    <p>A virtual storefont for handmade products and designs</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Typscript</span>
+                        <span class="skill-tag">NUXT JS</span>
+                        <span class="skill-tag">Tailwind</span>
+                    </div>
                     <div class="portfolio-links">
-                        <a href="#">View Project</a>
+                        <a href="http://localhost:3000">View Project</a>
                         <a href="#">Case Study</a>
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item" data-category="app">
-                <div class="portfolio-img">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" alt="Analytics Dashboard">
-                </div>
-                <div class="portfolio-info">
-                    <h3>Data Analytics Dashboard</h3>
-                    <p>Real-time business analytics dashboard with interactive data visualization tools.</p>
-                    <div class="portfolio-links">
-                        <a href="#">View Project</a>
-                        <a href="#">Case Study</a>
-                    </div>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="mobile">
-                <div class="portfolio-img">
-                    <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Fitness App">
-                </div>
-                <div class="portfolio-info">
-                    <h3>FitTrack Mobile App</h3>
-                    <p>A fitness tracking app with workout plans, nutrition tracking, and progress analytics.</p>
-                    <div class="portfolio-links">
-                        <a href="#">View Project</a>
-                        <a href="#">Case Study</a>
-                    </div>
-                </div>
-            </div>
+
             <div class="portfolio-item" data-category="web">
                 <div class="portfolio-img">
-                    <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Corporate Website">
+                    <img src="img/unbank_nuxt1.JPG" alt="Bitcoin DCA landing page">
                 </div>
                 <div class="portfolio-info">
-                    <h3>TechStart Corporate Site</h3>
-                    <p>Modern corporate website with animated elements and CMS integration.</p>
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">Feb 2025</span>
+                    </div>
+                    <h3>Bitcoin DCA calculator</h3>
+                    <p>An investement calculator for implementing DCA accumation of bitcoin.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Typscript</span>
+                        <span class="skill-tag">NUXT JS</span>
+                        <span class="skill-tag">Tailwind</span>
+                        <span class="skill-tag">Vercel</span>
+                    </div>
                     <div class="portfolio-links">
-                        <a href="#">View Project</a>
+                        <a href="https://bitcoin-dca-calc-uizu.vercel.app/">View Project</a>
                         <a href="#">Case Study</a>
                     </div>
                 </div>
             </div>
-            <div class="portfolio-item" data-category="app">
+
+            <div class="portfolio-item" data-category="nocode">
                 <div class="portfolio-img">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Project Management">
+                    <img src="img/laserfocus_cover.jpg" alt="Laserfocus cover page">
                 </div>
                 <div class="portfolio-info">
-                    <h3>TeamFlow Project Management</h3>
-                    <p>Collaborative project management tool with task tracking and team communication.</p>
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">Dec 2023 - Feb 2024</span>
+                    </div>
+                    <h3>Laserfocus</h3>
+                    <p>A platform for bitcoiners to connect, collaborate and focus on set goals.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Bubble.io</span>
+                        <span class="skill-tag">Alby LN</span>
+                    </div>
                     <div class="portfolio-links">
-                        <a href="#">View Project</a>
+                        <a href="https://laserfocus.pro">View Project</a>
                         <a href="#">Case Study</a>
                     </div>
                 </div>
             </div>
+
             <div class="portfolio-item" data-category="mobile">
                 <div class="portfolio-img">
-                    <img src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Finance App">
+                    <img src="img/TG-screen.jpg" alt="Telegram bot page">
                 </div>
                 <div class="portfolio-info">
-                    <h3>MoneyMind Finance Tracker</h3>
-                    <p>Personal finance app with budgeting tools, expense tracking, and financial insights.</p>
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">Apr 2023 - Sep 2023</span>
+                    </div>
+                    <h3>Meme menace</h3>
+                    <p>A Telegram bot that displays memes and skeets.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Telegram</span>
+                        <span class="skill-tag">Telegraf</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Mongo DB</span>
+                        <span class="skill-tag">Netlify</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="http://t.me/memePlugg_bot">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-img">
+                    <img src="img/work-backend.png" alt="Backend task cover.">
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">Jun 2022 - Aug 2022</span>
+                    </div>
+                    <h3>Backend task | The Odin project</h3>
+                    <p>My implementation of API endpoints task on the odin project</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Mongo DB</span>
+                        <span class="skill-tag">Joi</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="https://github.com/Obi1-x/MERN_stack_drill">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-img">
+                    <img src="img/ulearn_land.JPG" alt="Ulearn-app landing page">
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">Jan 2022 - Apr 2022</span>
+                    </div>
+                    <h3>Ulearn-app</h3>
+                    <p>A course platform built for Yaba tech lectures</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React JS</span>
+                        <span class="skill-tag">Bootstrap 5</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">Jitsi video</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="https://ulearn-ffc79.web.app/">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="game">
+                <div class="portfolio-img">
+                    <img src="img/debug_shoot.JPG" alt="Debug.shoot game menu.">
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">Dec 2021</span>
+                    </div>
+                    <h3>Debug dot shoot</h3>
+                    <p>A hyper casual game about debuging system code.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Unity</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="https://obi1-x.itch.io/debugdotshoot">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="web">
+                <div class="portfolio-img">
+                    <img src="img/odin_landing.JPG" alt="Frontend task page.">
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">July 2021 - Nov 2021</span>
+                    </div>
+                    <h3>Frontend task | The Odin project</h3>
+                    <p>My implementation of the landing page design task on the odin project</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript(ES6)</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="https://obi1-x.github.io/landing_page_odin/#">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="mobile">
+                <div class="portfolio-img">
+                    <img src="img/work-3ade.jpg" alt="E-commerce App.">
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">April 2020 - Oct 2020</span>
+                    </div>
+                    <h3>3ade</h3>
+                    <p>Virtual store front on a mobile app</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Android SDK</span>
+                        <span class="skill-tag">Android studio</span>
+                        <span class="skill-tag">Firebase</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="https://bit.ly/3S4BE67">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="embedded">
+                <div class="portfolio-img">
+                    <img src="img/work-embedded.JPG" alt="Circuite diagramn and code.">
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">June 2017 - Dec 2019</span>
+                    </div>
+                    <h3>RFID based tolling system | Other embedded systems dev.</h3>
+                    <p>Hardware and software system design for a tolling system and similar systems.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">MPLAB IDE</span>
+                        <span class="skill-tag">Proteus ISIS</span>
+                        <span class="skill-tag">PIC MCU</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="https://bit.ly/3S4BE67">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="blockchain">
+                <div class="portfolio-img">
+                    <img src="img/work-blockchain.JPG" alt="Hashurance contract page">
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">March 2021 - June 2021</span>
+                    </div>
+                    <h3>Hashurance Protocol</h3>
+                    <p>An EVM based insurance Dapp</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Solidity</span>
+                        <span class="skill-tag">Web3.js</span>
+                        <span class="skill-tag">BSC testnet</span>
+                        <span class="skill-tag">Trufle</span>
+                    </div>
+                    <div class="portfolio-links">
+                        <a href="https://testnet.bscscan.com/address/0xD216F3f9d744c41f1b0c5e16c32a8378e6b974A8">View Project</a>
+                        <a href="#">Case Study</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item" data-category="vba">
+                <div class="portfolio-img">
+                    <img src="img/work-excel-vba.JPG" alt="Excel VBA macro">
+                </div>
+                <div class="portfolio-info">
+                    <div class="portfolio-item-date">
+                      <span class="date-tag">May 2024</span>
+                    </div>
+                    <h3>Bitcoin POW macro | ECDSA3_20230409</h3>
+                    <p>Calculations for bitcoin's encryption</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Excel spreadsheet</span>
+                        <span class="skill-tag">Excel VBA macro</span>
+                    </div>
                     <div class="portfolio-links">
                         <a href="#">View Project</a>
                         <a href="#">Case Study</a>
@@ -180,13 +451,14 @@
     <section id="services">
         <h2 class="section-title">My Services</h2>
         <div class="services-grid">
+
             <div class="service-card">
                 <div class="service-icon">
-                    <i class="fas fa-code"></i>
+                    <i class="fas fa-code" aria-hidden="true"></i>
                 </div>
                 <h3>Frontend Development</h3>
                 <p>Beautiful, responsive websites built with modern technologies that work across all devices.</p>
-                <div class="service-price">From $1,500</div>
+                <div class="service-price">From $100</div>
                 <div class="service-industries">
                     <h4>Industries I serve:</h4>
                     <div class="industry-tags">
@@ -196,13 +468,14 @@
                     </div>
                 </div>
             </div>
+    
             <div class="service-card">
                 <div class="service-icon">
-                    <i class="fas fa-server"></i>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
                 </div>
-                <h3>Backend Development</h3>
-                <p>Robust server-side solutions, APIs, and database architectures to power your applications.</p>
-                <div class="service-price">From $2,000</div>
+                <h3>Technical writings</h3>
+                <p>Write clear and concise API documentations, software manuals and engineer reports.</p>
+                <div class="service-price">From $50</div>
                 <div class="service-industries">
                     <h4>Industries I serve:</h4>
                     <div class="industry-tags">
@@ -212,6 +485,7 @@
                     </div>
                 </div>
             </div>
+        <!--
             <div class="service-card">
                 <div class="service-icon">
                     <i class="fas fa-mobile-alt"></i>
@@ -228,67 +502,111 @@
                     </div>
                 </div>
             </div>
+        -->
+
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2 class="section-title">Client Testimonials</h2>
+    <!-- Reviews Section -->
+    <section id="reviews">
+        <h2 class="section-title">Reviews</h2>
         <div class="testimonial-stats">
-            <div class="stat-number">50+</div>
+            <div class="stat-number">10+</div>
             <div class="stat-label">Projects Completed</div>
         </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p>William transformed our outdated website into a modern, high-performing platform that increased our conversion rate by 45%. His attention to detail and technical expertise were impressive.</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-img">
-                        <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah Johnson">
+
+        <div class="scroll-buttons">
+            <div class="scroll-left"><i class="fa fa-caret-left" aria-hidden="true"></i></div>
+            <div class="scroll-right"><i class="fa fa-caret-right" aria-hidden="true"></i></div>
+        </div>
+
+        <div class="horizontal-scroll-container">
+            <div class="testimonials-grid card-scroll-wrapper">
+        
+                <div class="testimonial-card scroll-card">
+                    <div class="testimonial-content">
+                        <p>I had the pleasure of working with Okezie on the Ulearn-app project. He consistently delivered
+                            quality work with impressive efficiency, while maintaining clear communication and professionalism.
+                            His resourcefullness and problem-solving skills facilitated this project, despite working with
+                            limited resources. I highly recommend Adam for any development role, as he is a reliable, skilled,
+                            and results-driven professional.</p>
                     </div>
-                    <div class="author-info">
-                        <h4>Sarah Johnson</h4>
-                        <p>CEO, TechSolutions</p>
-                    </div>
-                    <div class="testimonial-source">
-                        <i class="fab fa-linkedin"></i>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p>The mobile app William developed for our fitness startup exceeded all expectations. User engagement is through the roof, and the codebase is so clean that our team can easily maintain it.</p>
-                </div>
-                <div class="testimonial-author">
-                    <div class="author-img">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
-                    </div>
-                    <div class="author-info">
-                        <h4>Michael Chen</h4>
-                        <p>Founder, FitTrack</p>
-                    </div>
-                    <div class="testimonial-source">
-                        <i class="fab fa-google"></i>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="img/akidi.jpg" alt="Samuel Akidi">
+                        </div>
+                        <div class="author-info">
+                            <h4>Samuel Akidi</h4>
+                            <p>AI engineer</p>
+                        </div>
+                        <div class="testimonial-source">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="testimonial-card">
-                <div class="testimonial-content">
-                    <p>We hired William to build our e-commerce platform from scratch. Not only did he deliver ahead of schedule, but he also implemented several optimizations that reduced our server costs by 30%.</p>
+        
+                <div class="testimonial-card scroll-card">
+                    <div class="testimonial-content">
+                        <p>Excellent and timely work. Codes brilliantly!</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="img/charlie2121.jpg" alt="Charlie 2121">
+                        </div>
+                        <div class="author-info">
+                            <h4>Charlie 2121</h4>
+                            <p>Lightning node user</p>
+                        </div>
+                        <div class="testimonial-source">
+                            <i class="fab fa-google"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="testimonial-author">
-                    <div class="author-img">
-                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Emma Rodriguez">
+        
+                <div class="testimonial-card scroll-card">
+                    <div class="testimonial-content">
+                        <p>I worked with Okezie on Laserfocus, and a frontend project to create modules in nuxt. It was a
+                            pleasure working with Okezie as he delivered results efficiently and swiftly, all with great
+                            professionalism and easy communication. I can highly recommend Okezie for your project and we are
+                            looking forward to work on future projects at https://rankplan.us together. </p>
                     </div>
-                    <div class="author-info">
-                        <h4>Emma Rodriguez</h4>
-                        <p>Marketing Director, LuxeFashion</p>
-                    </div>
-                    <div class="testimonial-source">
-                        <i class="fab fa-twitter"></i>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="img/leon.jpeg" alt="Leon Siegmund">
+                        </div>
+                        <div class="author-info">
+                            <h4>Leon Siegmund</h4>
+                            <p>Lightning News</p>
+                        </div>
+                        <div class="testimonial-source">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
                     </div>
                 </div>
+        
+                <div class="testimonial-card scroll-card">
+                    <div class="testimonial-content">
+                        <p>Working with Okezie was a smooth and positive experience. He is reliable, communicates clearly, and
+                            always follows through on his part of the work. On our project, he brought a great mix of technical
+                            skill and attention to detail, especially in coding, data entry and content related tasks. He is
+                            also a thoughtful collaborator who listens, contributes ideas, and makes teamwork feel easy. I'd
+                            happily work with him again and recommend him to anyone looking for someone dependable and
+                            dedicated.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-img">
+                            <img src="img/alege.jpg" alt="Samuel Alege">
+                        </div>
+                        <div class="author-info">
+                            <h4>Samuel Alege</h4>
+                            <p>UI/UX Expert</p>
+                        </div>
+                        <div class="testimonial-source">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                    </div>
+                </div>
+        
             </div>
         </div>
     </section>
@@ -299,7 +617,7 @@
         <div class="contact-container">
             <div class="contact-info">
                 <h3>Let's talk about your project</h3>
-                <p>Have a project in mind or want to discuss potential collaboration? Feel free to reach out through any of these channels.</p>
+                <p>Have a project in mind or want to discuss potential employment or collaboration? Feel free to reach out through any of these channels.</p>
                 
                 <div class="contact-method">
                     <div class="contact-icon">
@@ -307,29 +625,20 @@
                     </div>
                     <div class="contact-details">
                         <h4>Email</h4>
-                        <a href="mailto:hello@williamturner.dev">hello@williamturner.dev</a>
+                        <a href="mailto:obiefunaokezie8@gmail.com">obiefunaokezie8@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Telegram</h4>
+                        <a href="https://t.me/eizeko">Chat on Telegram</a>
                     </div>
                 </div>
                 
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>Phone</h4>
-                        <a href="tel:+1234567890">+1 (234) 567-890</a>
-                    </div>
-                </div>
-                
-                <div class="contact-method">
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <div class="contact-details">
-                        <h4>WhatsApp</h4>
-                        <a href="https://wa.me/1234567890">Chat on WhatsApp</a>
-                    </div>
-                </div>
                 
                 <div class="contact-method">
                     <div class="contact-icon">
@@ -341,11 +650,10 @@
                     </div>
                 </div>
                 
-                <div class="contact-social">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                <div class="social-icons">
+                    <a href="https://github.com/Obi1-x" class="active-link"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/okezie-obiefuna-6a098278" class="active-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href=""><i class="fab fa-twitter no-link"></i></a>
                 </div>
             </div>
             
@@ -361,13 +669,16 @@
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" id="subject" class="form-control" required>
+                        <input type="text" id="title" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label for="message">Project Details</label>
                         <textarea id="message" class="form-control" required></textarea>
                     </div>
-                    <button type="submit" class="cta-button">Send Message</button>
+                    <button type="submit" id="submitBtn" class="cta-button">
+                        <span class="btn-text">Send Message</span>
+                        <div class="spinner hidden"></div>
+                    </button>
                 </form>
             </div>
         </div>
@@ -378,22 +689,22 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-container">
             <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="William Turner">
+                <img src="img/about-self.JPG" alt="William Turner">
             </div>
             <div class="about-content">
                 <h3>Software Developer & Problem Solver</h3>
-                <p>With over 7 years of experience in software development, I've helped startups and established businesses transform their ideas into successful digital products. My approach combines technical excellence with a deep understanding of user needs.</p>
-                <p>I believe in writing clean, maintainable code and building solutions that stand the test of time. When I'm not coding, you'll find me contributing to open-source projects, mentoring junior developers, or exploring new technologies.</p>
+                <p>With over 3 years of experience in software development, I've helped startups and established businesses transform their ideas into successful digital products. My approach combines technical expertise with a deep understanding of user needs.</p>
+                <p>I believe in writing clean, maintainable code and building solutions that stand the test of time. When I'm not coding, you'll find me exploring new technologies.</p>
                 
                 <div class="about-details">
                     <h4>Key Expertise</h4>
                     <ul>
-                        <li>Full-stack Development</li>
-                        <li>UI/UX Design</li>
-                        <li>Performance Optimization</li>
-                        <li>Technical Leadership</li>
+                        <li>Frontend web development</li>
+                        <li>Mobile app development</li>
+                        <li>Embedded software development</li>
+                        <li>Technical writing</li>
                         <li>Agile Development</li>
-                        <li>Code Review & Mentoring</li>
+                        <li>Code Review.</li>
                     </ul>
                 </div>
                 
@@ -405,6 +716,7 @@
     </section>
 
     <!-- Blog Section -->
+    <!--
     <section id="blog">
         <h2 class="section-title">Latest Articles</h2>
         <div class="blog-grid">
@@ -474,49 +786,48 @@
             </div>
         </div>
     </section>
+    -->
 
     <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-about">
                 <div class="footer-logo">Devfolio</div>
-                <p>Creating digital experiences that are beautiful, functional, and user-focused.</p>
-                <p>� 2023 William Turner. All rights reserved.</p>
+                <p>Creating digital experiences that are appealing, functional, and user-focused.</p>
+                <p>� 2025 Okezie Obiefuna. All rights reserved.</p>
             </div>
             <div class="footer-links">
                 <h3>Quick Links</h3>
                 <ul>
-                    <li><a href="#home">Home</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a onclick="setWeb()" href="#portfolio">Portfolio</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#blog">Blog</a></li>
+                    <!-- <li><a href="#blog">Blog</a></li> -->
                 </ul>
             </div>
             <div class="footer-links">
                 <h3>Services</h3>
                 <ul>
-                    <li><a href="#">Web Development</a></li>
-                    <li><a href="#">Mobile Development</a></li>
-                    <li><a href="#">UI/UX Design</a></li>
-                    <li><a href="#">Consulting</a></li>
-                    <li><a href="#">Technical Writing</a></li>
+                    <li><a href="#services">Web Development</a></li>
+                    <li><a href="#services">Technical Writing</a></li>
                 </ul>
             </div>
             <div class="footer-social">
                 <h3>Connect With Me</h3>
-                <div class="footer-social-links">
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                <div class="social-icons">
+                    <a href="https://github.com/Obi1-x" class="active-link"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/okezie-obiefuna-6a098278" class="active-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href=""><i class="fab fa-twitter no-link"></i></a>
                 </div>
                 <p>Want to discuss a project? <a href="#contact" style="color: var(--light-blue);">Get in touch</a></p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>Designed & Developed by William Turner</p>
+            <p>Designed & Developed by Okezie Obiefuna</p>
+            <p>Powered by: HTML, CSS, JavaScript, Github, Font awesome, Google calender, Pexels & EmailJS.</p>
         </div>
     </footer>
 
