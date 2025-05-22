@@ -65,7 +65,7 @@ filterButtons.forEach(button => {
         const filter = clickedButton.getAttribute('data-filter');
 
         portfolioItems.forEach(item => {
-            if (filter === 'all' || item.getAttribute('data-category') === filter) {
+            if (filter === 'all' || item.getAttribute('data-category').includes(filter)) { //item.getAttribute('data-category') === filter
                 item.style.display = 'block';
                 item.style.opacity = '1';
                 item.style.transform = 'translateY(0)';
@@ -96,15 +96,15 @@ backToTopButton.addEventListener('click', () => {
 });
 
 
-//Email service.
 emailjs.init({
     publicKey: "pGdrVaeIUVjomQOCy",
-  });
+});
 
 
 // Form Submission
 //const contactForm = document.getElementById('contactForm');
 const contactForm = document.querySelector('#contactForm');
+
 
 contactForm.addEventListener('submit', function (fF) {
     fF.preventDefault();
@@ -125,25 +125,27 @@ contactForm.addEventListener('submit', function (fF) {
         message: document.getElementById('message').value
     }
 
-    emailjs.send("code-port-conatct-1", "port-contact-temp-123", templateParams)
-        .then(() => {
-            alert('Email sent! Thank you for your message! I will get back to you soon.');
+    if (emailjs) {
+        emailjs.send("code-port-conatct-1", "port-contact-temp-123", templateParams)
+            .then(() => {
+                alert('Email sent! Thank you for your message! I will get back to you soon.');
 
-            // Re-enable button and reset.
-            submitBtn.disabled = false;
-            btnText.textContent = 'Send Message';
-            spinner.classList.add('hidden');
-            contactForm.reset();
-        })
-        .catch(err => {
-            console.error('Error:', err);
-            alert('Something went wrong. Please try again later.');
+                // Re-enable button and reset.
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send Message';
+                spinner.classList.add('hidden');
+                contactForm.reset();
+            })
+            .catch(err => {
+                console.error('Error:', err);
+                alert('Something went wrong. Please try again later.');
 
-            // Re-enable button and reset.
-            submitBtn.disabled = false;
-            btnText.textContent = 'Send Message';
-            spinner.classList.add('hidden');
-        });
+                // Re-enable button and reset.
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send Message';
+                spinner.classList.add('hidden');
+            });
+    } else console.log("An error occured! Please check your networ connection.");
 });
 
 const scrollAnimateItems = '.skills-container, .portfolio-grid, .services-grid, .testimonials-grid, .contact-container, .about-container';
