@@ -5,6 +5,7 @@
     --accent-blue: #16467e;
     --light-blue: #00b4d8;
     --gradient-blue: linear-gradient(135deg, var(--accent-blue), var(--light-blue));
+    --text-gradient-blue: linear-gradient(135deg, #3851ff, var(--light-blue));
     --text-white: #f8f9fa;
     --text-light: #e9ecef;
     --text-muted: #adb5bd;
@@ -78,7 +79,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(15, 52, 96, 0.3), rgba(15, 52, 96, 0.8)), url('img/remote-desk.avif') no-repeat center center/cover;
+    background: linear-gradient(rgba(15, 52, 96, 0.4), rgba(15, 52, 96, 0.9)), url('img/hero-image.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     padding: 0 10%;
@@ -92,7 +93,7 @@ nav ul li a:hover {
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    background: var(--gradient-blue);
+    background: var(--text-gradient-blue);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -1040,6 +1041,7 @@ footer {
     
     .hero {
         padding: 0 5%;
+        background: linear-gradient(rgba(15, 52, 96, 0.4), rgba(15, 52, 96, 0.9)), url('img/hero-image-mobile.jpg') no-repeat center center/cover;
     }
     
     .hero h1 {
@@ -1065,6 +1067,10 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .hero{
+        background: linear-gradient(rgba(15, 52, 96, 0.4), rgba(15, 52, 96, 0.9)), url('img/hero-image-mobile.jpg') no-repeat center center/cover;
+    }
+
     .hero h1 {
         font-size: 2rem;
     }
