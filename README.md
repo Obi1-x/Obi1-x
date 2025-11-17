@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Okezie Obiefuna.
 - 👀 I’m interested in Frontend web, Android, Game and decentrailzed app development.
-- 🌱 I’m currently learning NUXT JS.
+- 🌱 I’m currently learning Rust.
 - 💞️ I’m looking to collaborate on NEXT JS and NUXT JS apps.
 - 📫 How to reach me ...
 
