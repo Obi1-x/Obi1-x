@@ -300,6 +300,7 @@ url('img/skill-frontend.jpg') no-repeat center center/cover;
 
 .portfolio-links {
     display: flex;
+    margin-top: 20px;
 }
 
 .portfolio-links a {
