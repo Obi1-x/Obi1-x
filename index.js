@@ -1,4 +1,4 @@
-//****** TEMPLATE SCRIPT ******
+//#Script
 
 // Mobile Navigation Toggle
 const hamburger = document.querySelector('.hamburger');
@@ -25,8 +25,6 @@ const setWeb = () => {
     document.querySelector('.portfolio-filter').children[1].click();
     hasClickedWeb = true;
 }
-
-
 
 
 // Smooth scrolling for anchor links
@@ -95,10 +93,7 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
-
-emailjs.init({
-    publicKey: "pGdrVaeIUVjomQOCy",
-});
+if (typeof emailjs !== 'undefined') emailjs?.init({ publicKey: "pGdrVaeIUVjomQOCy" });
 
 
 // Form Submission
@@ -238,4 +233,7 @@ document.querySelectorAll('.skill-category').forEach((aSkillCat, index) => {
 });
 
 window.addEventListener('scroll', animateOnScroll);
-window.addEventListener('load', animateOnScroll);
+window.addEventListener('load', () => {
+    animateOnScroll
+    document.getElementById("allrights").setHTML(`© ${new Date().getFullYear().toString()} Okezie Obiefuna. All rights reserved.`);
+});

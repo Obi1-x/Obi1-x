@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study - Devfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="study.css">
+    <!-- script src="case_study.json"></script -->
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="case-header">
+        <div>
+            <a class="logo" href="index.html">Devfolio</a>
+        </div>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#skills">Skills</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#reviews">Reviews</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Case Study Content -->
+    <div id="case-study-content">
+        <!-- Loading State -->
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Loading case study...</p>
+        </div>
+
+        <!-- Error State -->
+        <div class="error-message" id="error-message" style="display: none;">
+            <h3>Case Study Not Found</h3>
+            <p>Sorry, the requested case study could not be loaded.</p>
+            <p><a href="index.html#portfolio">Return to Portfolio</a></p>
+        </div>
+
+        <!-- Case Study Hero -->
+        <section class="case-hero" id="case-hero" style="display: none;">
+            <div class="case-hero-content">
+                <div class="case-hero-nav">
+                 <a href="index.html#portfolio" class="hero-nav-btn">
+                  <i class="fas fa-arrow-left"></i>
+                  Home
+                 </a>
+
+                 <a href="#" class="hero-nav-btn disabled" id="hero-next-btn">
+                  Next
+                  <i class="fas fa-arrow-right"></i>
+                 </a>  
+                </div>
+                <h1 id="case-title">Project Title</h1>
+                <h2 id="case-subtitle">Project Description</h2>
+                <div class="case-meta" id="case-meta"></div>
+                <div class="tech-stack" id="hero-tech-stack"></div>
+            </div>
+        </section>
+
+        <!-- Case Study Tabs -->
+        <div class="case-container" id="case-container" style="display: none;">
+            <div class="case-tabs">
+                <button class="tab-btn active" data-tab="overview">Overview</button>
+                <button class="tab-btn" data-tab="challenges">Challenges</button>
+                <button class="tab-btn" data-tab="solution">Solution</button>
+                <button class="tab-btn" data-tab="results">Results</button>
+                <button class="tab-btn" data-tab="gallery">Gallery</button>
+            </div>
+
+            <!-- Overview Tab -->
+            <div class="tab-content active" id="overview">
+                <h2 class="section-title">Project Overview</h2>
+                <div class="case-content" id="overview-content"></div>
+                
+                <div class="highlight-box">
+                    <h3>Key Objectives</h3>
+                    <div id="key-objectives"></div>
+                </div>
+
+                <div class="stats-grid" id="overview-stats"></div>
+            </div>
+
+            <!-- Challenges Tab -->
+            <div class="tab-content" id="challenges">
+                <h2 class="section-title">Challenges Faced</h2>
+                <div class="case-content" id="challenges-content"></div>
+                
+                <div class="highlight-box">
+                    <h3>Technical Constraints</h3>
+                    <div id="technical-constraints"></div>
+                </div>
+            </div>
+
+            <!-- Solution Tab -->
+            <div class="tab-content" id="solution">
+                <h2 class="section-title">Our Solution</h2>
+                <div class="case-content" id="solution-content"></div>
+                
+                <h3 class="section-title">Technology Stack</h3>
+                <div class="tech-stack" id="solution-tech-stack"></div>
+
+                <div class="highlight-box">
+                    <h3>Key Features</h3>
+                    <div id="key-features"></div>
+                </div>
+            </div>
+
+            <!-- Results Tab -->
+            <div class="tab-content" id="results">
+                <h2 class="section-title">Results & Impact</h2>
+                <div class="case-content" id="results-content"></div>
+                
+                <div class="stats-grid" id="results-stats"></div>
+
+                <div class="highlight-box">
+                    <h3>Client Feedback</h3>
+                    <p id="client-feedback"></p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Lessons Learned</h3>
+                    <div id="lessons-learned"></div>
+                </div>
+            </div>
+
+            <!-- Gallery Tab -->
+            <div class="tab-content" id="gallery">
+                <h2 class="section-title">Project Gallery</h2>
+                <div class="case-content">
+                    <p>Visual showcase of the project development process and final implementation.</p>
+                </div>
+                <div class="case-gallery" id="gallery-content"></div>
+            </div>
+
+            <!-- Project Links -->
+            <div class="case-cta">
+                <h2 class="section-title">Explore This Project</h2>
+                <p>Check out the live project or browse the source code.</p>
+                <div class="project-links" id="project-links"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">Devfolio</div>
+                <p>Creating digital experiences that are appealing, functional, and user-focused.</p>
+                <p id="allrights">Rights</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html#skills">Skills</a></li>
+                    <li><a href="index.html#portfolio">Portfolio</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="index.html#services">Web Development</a></li>
+                    <li><a href="index.html#services">Microsoft Excel Macro Development</a></li>
+                    <li><a href="index.html#services">Technical Writing</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect With Me</h3>
+                <div class="social-icons">
+                    <a href="https://github.com/Obi1-x" class="active-link"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/okezie-obiefuna-6a098278" class="active-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/kezyObi1" class="active-link"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p>Want to discuss a project? <a href="index.html#contact" style="color: var(--light-blue);">Get in touch</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Designed & Developed by Okezie Obiefuna</p>
+            <p>Powered by: HTML, CSS, JavaScript, Github, Font awesome, Google calender, Pexels & EmailJS.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="study.js"></script>
+</body>
+</html>
